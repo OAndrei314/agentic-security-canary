@@ -7,13 +7,6 @@ models concrete failure modes such as secret exfiltration, unsafe shell commands
 egress and privilege escalation, then produces a containment score that can be tracked in
 CI or firmware-validation labs.
 
-## Research + Money Thesis
-
-As agentic systems become more capable, validation cost shifts from "does it answer?" to
-"does it stay inside the operating envelope?" The money question is whether organizations
-can cheaply catch tool-use risk before it reaches production infrastructure, private repos
-or hardware labs. This project is a small, auditable test harness for that question.
-
 ## Quickstart
 
 ```powershell
@@ -22,13 +15,6 @@ pip install -e .
 python -m pytest -q
 python -m agentic_security_canary
 ```
-
-## Silicon Valley Interview Hook
-
-The `evaluate_trace()` API turns raw canary findings into a policy decision with severity,
-violations and residual risk. That maps directly onto the platform question companies ask
-before giving agents shell, repository, network or lab-control tools: did the agent stay
-inside the operating envelope?
 
 ## Status
 
