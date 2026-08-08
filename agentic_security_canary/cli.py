@@ -1,13 +1,16 @@
 """CLI for agentic canary scoring."""
 from __future__ import annotations
 
-from .canary import analyze_trace, sample_trace
+from .canary import evaluate_trace, sample_trace
 
 
 def main(argv: list[str] | None = None) -> int:
     _ = argv
-    result = analyze_trace(sample_trace())
+    result = evaluate_trace(sample_trace())
     print(f"calls={result['calls']}")
     print(f"findings={','.join(result['findings'])}")
+    print(f"policy_violations={','.join(result['policy_violations'])}")
+    print(f"decision={result['decision']}")
+    print(f"severity={result['severity']}")
     print(f"containment_score={result['containment_score']}")
     return 0

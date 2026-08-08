@@ -23,10 +23,18 @@ python -m pytest -q
 python -m agentic_security_canary
 ```
 
+## Silicon Valley Interview Hook
+
+The `evaluate_trace()` API turns raw canary findings into a policy decision with severity,
+violations and residual risk. That maps directly onto the platform question companies ask
+before giving agents shell, repository, network or lab-control tools: did the agent stay
+inside the operating envelope?
+
 ## Status
 
-MVP: tool-call trace model, deterministic risk rules, containment score and tests.
-Next steps: add fixtures for firmware validation agents and local MCP-style tool servers.
+MVP: tool-call trace model, deterministic risk rules, policy gating, containment score and
+tests. Next steps: add fixtures for firmware validation agents and local MCP-style tool
+servers.
 
 ## License
 
